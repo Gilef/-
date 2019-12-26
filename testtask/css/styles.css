@@ -12,7 +12,7 @@
     font-style: normal;
 }
 
-/***body***/
+/*********************BODY*****************/
 
 body {
     font-family: "Arial", "Verdana", "sans-serif";
@@ -63,41 +63,45 @@ h3 {
     margin: auto;
     padding: 0 20px;
 }
+
 /***************HEADER*****************/
 
-.header-wrap{
-    min-height: 197px;
-    padding-bottom: 25px;
+header {
+    background: url("../img/header-bg.png");
+
 }
+
+.header-wrap {
+    min-height: 197px;
+    position: relative;
+}
+
 .header-top {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
-    /* padding: 27px 165px 23px 165px; */
-    min-height: 171px;
-    background: url("../img/header-bg.png");  /*753px 171px*/
+    min-height: 216px;
 }
-.header-bot{
+
+.anchor {
+    width: 0px;
+    margin: auto;
+    position: relative;
+}
+
+.header-bot {
     box-sizing: border-box;
-    padding: 7px 110px;
+    padding: 7px 118px;
     min-height: 58px;
     min-width: 713px;
-    border-radius:45px;
+    border-radius: 45px;
     text-align: center;
     color: #ffffff;
     background-color: #b3b397;
-    position: relative;
-}
-.paint-wrapper{
     position: absolute;
-    z-index: 2;
-    top: 0px;
-    right: 60px;
-    width: 560px;
-    height: 10px;
-    background-color: #b3b397;
-
+    top: -32px;
+    right: -357px;
 }
 
 .header-bot::after {
@@ -111,43 +115,72 @@ h3 {
     background: url(../img/glue-gun.png) no-repeat center center;
 }
 
-.header-bot::before {
-    content: "";
+.slime-container-1 {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: -7px;
-    right: 87px;
-    width: 596px;
-    height: 16px;
-    background: url(../img/header-decor.png) no-repeat center center;
+    right: 88px;
+    width: 593px;
+    height: 12px;
+    background: url(../img/line-cover-1.png) no-repeat;
 }
 
-/********************MAIN*******************/
+.slime-container-2 {
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    right: 120px;
+    width: 463px;
+    height: 15px;
+    background: url(../img/line-cover-2.png) no-repeat;
+}
+
+.paint-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 60px;
+    width: 560px;
+    height: 10px;
+    background-color: #b3b397;
+}
+
+/****************MAIN*******************/
 
 /*********ILLUSTRATIONS***********/
 
-.illustrations{
+.illustrations {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     min-height: 300px;
     position: relative;
+    margin-top: 50px;
 }
 
-.house-picture{
+.illustrations::after {
+    position: absolute;
+    content: "";
+    width: 384px;
+    height: 148px;
+    top: 54px;
+    left: 213px;
+    background: url(../img/upper-lines.png)no-repeat;
+}
+
+.house-picture {
     width: 50%;
 }
 
-.house-picture-wrapper{
+.house-picture-wrapper {
     position: absolute;
-    top: 1;
     left: -19px;
     width: 100%;
     height: 100%;
     background: url(../img/house-1.png) no-repeat;
-
 }
-.stages-picture{
+
+.stages-picture {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -156,7 +189,7 @@ h3 {
     padding-right: 14px;
 }
 
-.stage-item{
+.stage-item {
     height: 106px;
     width: 106px;
     border-radius: 50%;
@@ -165,53 +198,58 @@ h3 {
     margin: 0;
 }
 
-.stages-picture-1{
-     background: url(../img/circle-1.png) no-repeat center center; 
-     margin-left: 18px;
-    }
+.stages-picture-1 {
+    background: url(../img/circle-1.png) no-repeat center center;
+    margin-left: 18px;
+}
 
-.stages-picture-2{
-    background: url(../img/circle-2.png) no-repeat center center; 
+.stages-picture-2 {
+    background: url(../img/circle-2.png) no-repeat center center;
     padding-left: 15px;
 }
 
-.stages-picture-3{
-    background: url(../img/circle-3.png) no-repeat center center; 
+
+.stages-picture-3 {
+    background: url(../img/circle-3.png) no-repeat center center;
     margin-top: -46px;
     margin-left: 93px;
 }
+
 /*******FIRST-STAGE**********/
-.stage-1{
+
+.stage-1 {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 45px;
 }
 
-.stage-1 h2{
+.stage-1 h2 {
     padding: 5px 0;
     margin-top: 8px;
     margin-bottom: 39px;
 }
 
-.stage-1 h3{
+.stage-1 h3 {
     padding: 0;
     padding-top: 5px;
     line-height: normal;
 }
 
-.stage-1 p{
+.stage-1 p {
     margin: 0;
     margin-top: 5px;
     font-weight: 400;
     word-spacing: normal;
     text-align: inherit;
 }
-.steps-conteiner{
+
+.steps-conteiner {
     box-sizing: border-box;
-    padding: 2px;
+    padding: 3px;
+    padding-right: 8px;
     width: 106px;
     height: 37px;
-    border-radius:45px;
+    border-radius: 45px;
     background-color: #785c81;
     color: #ffffff;
     font-family: "Arial", "Verdana", "sans-serif";
@@ -220,154 +258,178 @@ h3 {
     text-align: center;
 }
 
-.stage-1 .steps-conteiner{
+.stage-1 .steps-conteiner {
     margin-bottom: 12px;
 }
-.steps-conteiner span:first-child{
+
+.steps-conteiner span:first-child {
     font-size: 25px;
     line-height: normal;
     padding: 0;
 }
-.steps-conteiner span:last-child{
+
+.steps-conteiner span:last-child {
     font-size: 14px;
     line-height: normal;
     padding: 0;
 }
 
-.first-stage-1{
+.first-stage-1 {
     width: 239px;
 }
 
-.first-stage-1 h3{
+.first-stage-1 h3 {
     max-width: 125px;
 }
-.first-stage-1 p{
+
+.first-stage-1 p {
     max-width: 80%;
     margin-top: 7px;
 }
 
-.first-stage-2{
+.first-stage-2 {
     width: 279px;
 }
 
-.first-stage-2 p{
+.first-stage-2 p {
     max-width: 84%;
     margin-top: 6px;
 }
 
-.first-stage-3 :not(.steps-conteiner){
+.first-stage-3 :not(.steps-conteiner) {
     width: 195px;
     padding-left: 5px;
     box-sizing: border-box;
 }
 
 /*******SECOND-STAGE**********/
-.stage-2{
+.stage-2 {
     display: flex;
     flex-wrap: wrap;
     min-height: 465px;
 }
 
-.stage-2 h2{
+.stage-2 h2 {
     padding: 0;
     margin-bottom: 10px;
 }
 
-.second-stage-left{
+.second-stage-left {
     width: 239px;
     min-height: 190px;
-    background: url(../img/logs.png) no-repeat; 
-}
-
-.pictures-container{
+    background: url(../img/logs.png) no-repeat;
     position: relative;
-    /* width: 100%;
-    height: 100px;
-    padding-top: 209px; */
 }
 
-.pictures-container::after{
+.second-stage-left::after {
     content: "";
     position: absolute;
-    bottom:-333px;
+    bottom: 185px;
+    left: 84px;
+    width: 147px;
+    height: 111px;
+    background: url(../img/mid-lines.png) no-repeat;
+}
+
+.pictures-container {
+    position: relative;
+}
+
+.pictures-container::after {
+    content: "";
+    position: absolute;
+    bottom: -334px;
     left: 184px;
     width: 100px;
     height: 100px;
     background: url(../img/second-circle-2.png) no-repeat center center;
 }
 
-.pictures-container::before{
+.pictures-container::before {
     content: "";
     position: absolute;
-    bottom:-333px;
+    bottom: -334px;
     left: 10px;
     width: 185px;
     height: 115px;
     background: url(../img/second-circle-1.png) no-repeat center center;
 }
 
-.second-stage-right{
+.second-stage-right {
     width: 474px;
 }
 
-.second-stage-1, .second-stage-2{
+.second-stage-1,
+.second-stage-2 {
     display: flex;
     flex-wrap: wrap;
 }
 
-.second-stage-1{
+.second-stage-1 {
     margin-top: 9px;
     min-height: 100px;
 }
 
-.de-wrapper{
+.de-wrapper {
     padding-left: 17px;
 }
 
-
-.de-wrapper p{
+.de-wrapper p {
     display: block;
     max-width: 341px;
     margin: 0;
 }
 
-.second-stage-1 p{
+.second-stage-1 p {
     margin-top: 11px;
 }
 
-
-.second-stage-2 p{
+.second-stage-2 p {
     margin-top: 11px;
 }
-    /*******THIRD-STAGE**********/
 
-.stage-3{
+/*******THIRD-STAGE**********/
+
+.stage-3 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     min-height: 312px;
     background: url(../img/house-finished.png) no-repeat 365px 50px;
+    position: relative;
 }
 
-.stage-3 h2{
-    padding-bottom: 20px; 
+.stage-3::before {
+    content: "";
+    position: absolute;
+    bottom: 118px;
+    left: 325px;
+    width: 136px;
+    height: 7px;
+    background: url(../img/bot-lines.png) no-repeat;
 }
-.stage-3 p{
+
+.stage-3 h2 {
+    padding-bottom: 20px;
+}
+
+.stage-3 p {
     max-width: 370px;
     margin-bottom: 0;
 }
 
-.stage-3 div{
+.stage-3 div {
     padding-top: 10px;
 }
 
-.logo{
+.logo {
     padding-left: 9px;
     padding-bottom: 1px;
 }
-.picture-container{
-    width:113px ;
-    height:117px ;
+
+.picture-container {
+    width: 113px;
+    height: 117px;
     background: url(../img/third-circle.png) no-repeat;
     margin-left: 237px;
     margin-top: -4px;
